@@ -13,15 +13,13 @@ public class BossAn_Ultimate : MonoBehaviour
 
     void OnEnable()
     {
-        // Reset danh sách trọng số mỗi khi GameObject được kích hoạt
         weightedList = new List<int>();
 
-        for (int i = 0; i < 1; i++) { weightedList.Add(1); } // 1 lần cho skill 1
-        for (int i = 0; i < 2; i++) { weightedList.Add(2); } // 2 lần cho skill 2
-        for (int i = 0; i < 7; i++) { weightedList.Add(3); } // 7 lần cho skill 3
-        for (int i = 0; i < 7; i++) { weightedList.Add(4); } // 7 lần cho skill 4
+        for (int i = 0; i < 1; i++) { weightedList.Add(1); }
+        for (int i = 0; i < 2; i++) { weightedList.Add(2); }
+        for (int i = 0; i < 7; i++) { weightedList.Add(3); }
+        for (int i = 0; i < 7; i++) { weightedList.Add(4); }
 
-        // Gọi hàm random skill để xóa
         StartCoroutine(WaitToRandom());
     }
 
@@ -35,8 +33,8 @@ public class BossAn_Ultimate : MonoBehaviour
     {
         if (weightedList.Count == 0)
         {
-            Debug.Log("No more skills to deactivate.");
-            return; // Không còn kỹ năng để xóa
+            Debug.Log("Out of skills.");
+            return;
         }
 
         int randomIndex = Random.Range(0, weightedList.Count);
@@ -74,7 +72,7 @@ public class BossAn_Ultimate : MonoBehaviour
                 break;
         }
 
-        Debug.Log("Skill " + randomSkill + " has been deactivated.");
+        Debug.Log("Skill " + randomSkill + " active false.");
     }
 
     void RemoveFromWeightedList(int skillNumber)

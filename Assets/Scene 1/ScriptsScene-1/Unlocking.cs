@@ -10,46 +10,49 @@ public class Unlocking : MonoBehaviour
     public GameObject LockObject;
     public GameObject MiniLockObject;
 
-    // Start is called before the first frame update
-    public  GameObject notice;
+    public GameObject notice;
+    private Pick_Item NoneSlot;
+
     void Start()
     {
-        
+        NoneSlot = FindObjectOfType<Pick_Item>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
     }
+
     public void OnUnlock()
     {
         if (Player_Item.tag == ItemNameToUnlock)
         {
-            if (UnlockedObject != null)
+            if (UnlockedObject != null) UnlockedObject.SetActive(true);
+            if (LockObject != null) LockObject.SetActive(false);
+            if (MiniLockObject != null) MiniLockObject.SetActive(false);
+
+            if (NoneSlot != null && NoneSlot.currentSelectedSlot != null)
             {
-                UnlockedObject.SetActive(true);
-            }
-            if (LockObject != null)
-            {
-                LockObject.SetActive(false);
-            }
-            if (MiniLockObject != null)
-            {
-                MiniLockObject.SetActive(false);
+                NoneSlot.currentSelectedSlot.sprite = null;
+
+                if (NoneSlot.currentActiveFrame != null)
+                {
+                    NoneSlot.currentActiveFrame.SetActive(false);
+                    NoneSlot.currentActiveFrame = null;
+                }
+
+                NoneSlot.currentSelectedSlot = null;
             }
         }
         else
         {
-            /* notice.OnClick("Cần chìa khóa để mở!");*/
             notice.SetActive(true);
             StartCoroutine(OffNotice());
         }
-
     }
+
     IEnumerator OffNotice()
     {
-        yield return new WaitForSeconds(2) ;
+        yield return new WaitForSeconds(2);
         notice.SetActive(false);
     }
 }

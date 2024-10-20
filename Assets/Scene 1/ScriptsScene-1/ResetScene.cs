@@ -18,10 +18,8 @@ public class ResetScene : MonoBehaviour
     }
     public void ResetCurrentScene()
     {
-        // Lấy tên của scene hiện tại
         string currentSceneName = SceneManager.GetActiveScene().name;
 
-        // Tải lại scene hiện tại
         SceneManager.LoadScene(currentSceneName);
     }
 }

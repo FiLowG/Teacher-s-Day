@@ -21,7 +21,7 @@ public class SecurityGuard : MonoBehaviour
         {
         spriteRenderer = SeePlayerYet.GetComponent<SpriteRenderer>();
         spriteColor = spriteRenderer.color;
-        spriteColor.a = 0;  // Bắt đầu với alpha là 0 (trong suốt)
+        spriteColor.a = 0;  
         spriteRenderer.color = spriteColor;
         StartCoroutine(OnSeeTrue());
         StartCoroutine(WaitAndMakeClear());
@@ -49,7 +49,7 @@ public class SecurityGuard : MonoBehaviour
 
         if (this.gameObject.name != "SecurityGuard-SeePlayer" && this.gameObject.name != "SawPlayer")
         {
-            if (spriteColor.a < 1 && Mclear)  // Alpha trong phạm vi 0 - 1
+            if (spriteColor.a < 1 && Mclear) 
             {
                 spriteColor.a += fadeSpeed * Time.deltaTime;
                 spriteRenderer.color = spriteColor;
@@ -62,7 +62,7 @@ public class SecurityGuard : MonoBehaviour
                 spriteRenderer.color = spriteColor;
                 if (spriteColor.a <= 0)
                 {
-                    this.gameObject.SetActive(false);  // Tắt GameObject khi alpha về 0
+                    this.gameObject.SetActive(false);  
                 }
             }
         }

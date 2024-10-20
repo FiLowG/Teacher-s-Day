@@ -5,13 +5,13 @@ using System.IO;
 
 public class InventoryManager : MonoBehaviour
 {
-    public Image[] slots = new Image[5]; // 5 slot đồ
+    public Image[] slots = new Image[5];
     private string saveFilePath;
 
     [System.Serializable]
     public class InventoryData
     {
-        public List<string> slotSprites; // Lưu tên của sprite
+        public List<string> slotSprites;
     }
 
     void Start()
@@ -28,17 +28,16 @@ public class InventoryManager : MonoBehaviour
         {
             if (slot.sprite != null)
             {
-                data.slotSprites.Add(slot.sprite.name); // Lưu tên sprite
+                data.slotSprites.Add(slot.sprite.name);
             }
             else
             {
-                data.slotSprites.Add(""); // Nếu slot trống
+                data.slotSprites.Add("");
             }
         }
 
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(saveFilePath, json);
-        Debug.Log("Inventory Saved: " + saveFilePath);
     }
 
     public void LoadInventory()
@@ -52,26 +51,19 @@ public class InventoryManager : MonoBehaviour
             {
                 if (!string.IsNullOrEmpty(data.slotSprites[i]))
                 {
-                    // Tìm sprite theo tên trong Resources (bạn phải đảm bảo sprite nằm trong thư mục Resources)
                     Sprite itemSprite = Resources.Load<Sprite>(data.slotSprites[i]);
                     if (itemSprite != null)
                     {
                         slots[i].sprite = itemSprite;
-                        slots[i].color = new Color(1, 1, 1, 1); // Đảm bảo hiển thị
+                        slots[i].color = new Color(1, 1, 1, 1);
                     }
                 }
                 else
                 {
                     slots[i].sprite = null;
-                    slots[i].color = new Color(1, 1, 1, 0); // Ẩn hình ảnh nếu trống
+                    slots[i].color = new Color(1, 1, 1, 0);
                 }
             }
-
-            Debug.Log("Inventory Loaded");
-        }
-        else
-        {
-            Debug.LogWarning("Save file not found!");
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BKGMusic : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Start is called before the first 
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);

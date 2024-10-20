@@ -8,43 +8,48 @@ public class GetDame : MonoBehaviour
     public Image BossHeal;
     public Image PlayerHeal;
     private GameStatsManager objectValue;
-    public float damageAmount_Player; // Sát thương tính theo phần trăm máu
-    public float damageAmount_Enemy; // Sát thương tính theo phần trăm máu
+    private float damageAmount_Player;
+    private float damageAmount_Enemy;
 
     public GameObject DameEffects;
-  
+
     void Start()
     {
-        damageAmount_Player = objectValue.GetPlayerAttack();
-        damageAmount_Enemy = objectValue.GetBossAttack();
+        objectValue = FindObjectOfType<GameStatsManager>();
+
+        if (objectValue != null)
+        {
+            damageAmount_Player = objectValue.GetPlayerAttack();
+            damageAmount_Enemy = objectValue.GetBossAttack();
+        }
+        else
+        {
+            Debug.LogError("Không tìm thấy GameStatsManager trong scene!");
+        }
     }
 
     void Update()
     {
-
     }
 
-    // Xử lý va chạm vật lý 2D
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        // Kiểm tra xem đối tượng va chạm có tag "Attack" hay không
         if (collision.gameObject.tag.Contains("Attack"))
         {
             if (this.gameObject.CompareTag("Player"))
             {
-                PlayerHeal.fillAmount -= damageAmount_Enemy; // Trừ máu của Player
+                PlayerHeal.fillAmount -= damageAmount_Enemy;
             }
             else if (this.gameObject.tag.Contains("Boss"))
             {
-                BossHeal.fillAmount -= damageAmount_Player; // Trừ máu của BOSS
+                BossHeal.fillAmount -= damageAmount_Player;
             }
         }
         if (collision.gameObject.CompareTag("Ultimate"))
         {
-           if (this.gameObject.tag.Contains("Boss"))
+            if (this.gameObject.tag.Contains("Boss"))
             {
                 DameEffects.SetActive(true);
-                
             }
         }
         if (collision.gameObject.CompareTag("Ultimate Dame"))
@@ -52,9 +57,7 @@ public class GetDame : MonoBehaviour
             if (this.gameObject.tag.Contains("Boss"))
             {
                 BossHeal.fillAmount -= objectValue.GetPlayerUltimate();
-
             }
         }
-
     }
 }

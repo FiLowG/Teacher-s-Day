@@ -4,23 +4,21 @@ using UnityEngine;
 
 public class StopBreath : MonoBehaviour
 {
-    public GameObject breathing;  // Đối tượng đại diện cho trạng thái thở (có thể là hiệu ứng hay âm thanh)
+    public GameObject breathing;
 
-    // Hàm để gọi khi nhấn giữ nút
     public void OnButtonPress()
     {
         if (breathing != null)
         {
-            breathing.SetActive(false);  // Tắt thở khi nhấn giữ
+            breathing.SetActive(false);
         }
     }
 
-    // Hàm để gọi khi thả nút ra
     public void OnButtonRelease()
     {
         if (breathing != null)
         {
-            breathing.SetActive(true);  // Bật thở lại khi thả nút
+            breathing.SetActive(true);
         }
     }
 }

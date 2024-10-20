@@ -18,7 +18,7 @@ public class UseSkill_Normal : MonoBehaviour
     public GameObject SetColorSkill;
     public float CD_time = 25;
     private float current_CD = 0;
-    private Color Used_Skill = new Color(107f / 255f, 94f / 255f, 94f / 255f); // 6B5E5E
+    private Color Used_Skill = new Color(107f / 255f, 94f / 255f, 94f / 255f); 
 
 
     void Start()

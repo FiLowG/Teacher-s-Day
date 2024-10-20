@@ -37,7 +37,6 @@ public class Notice_Guide : MonoBehaviour
             GuideEffects.SetActive(true);
             NoticePanel.SetActive(true);
            
-
         }
     }
     public void OnClickOffEffects()

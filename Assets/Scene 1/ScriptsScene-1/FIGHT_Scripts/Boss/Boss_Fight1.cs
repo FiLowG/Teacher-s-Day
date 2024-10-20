@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Boss_Fight1 : MonoBehaviour
 {
     public Image ManaBar;
-    public Image HealBar; // Khai báo Image cho Heal
+    public Image HealBar;
     public GameObject UltimateEffects;
     public GameObject AttackEffects;
     public GameObject HealEffects;
@@ -23,7 +23,7 @@ public class Boss_Fight1 : MonoBehaviour
     void Update()
     {
         
-        if (Time.time - lastSkillTime >= 5f) // Đảm bảo 5 giây giữa mỗi kỹ năng
+        if (Time.time - lastSkillTime >= 5f) 
         {
             if (BossCanFight.activeSelf && ManaBar.fillAmount >= 0.3 && HealBar.fillAmount <= 0.6 && !ShieldEffects.activeSelf && BossCanShield.activeSelf)
             {
@@ -36,7 +36,7 @@ public class Boss_Fight1 : MonoBehaviour
             if (BossCanFight.activeSelf && ManaBar.fillAmount >= 0.6 && HealBar.fillAmount != 1 && BossCanHeal.activeSelf && !HealEffects.activeSelf)
             {
                 UseHeal();
-                lastSkillTime = Time.time; // Cập nhật thời gian
+                lastSkillTime = Time.time; 
                 Debug.Log("Heal");
                 BossCanHeal.SetActive(false);
                 StartCoroutine(WaitSkill(5, BossCanHeal));

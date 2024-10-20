@@ -9,7 +9,6 @@ public class OpenBlack : MonoBehaviour
 
     void Start()
     {
-       
         spriteRenderer = GetComponent<SpriteRenderer>();
 
       

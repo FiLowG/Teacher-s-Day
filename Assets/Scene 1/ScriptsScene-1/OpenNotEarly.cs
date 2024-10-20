@@ -12,7 +12,6 @@ public class OpenNotEarly : MonoBehaviour
         StartCoroutine(NotEarly());
     }
 
-    // Update is called once per frame
     void Update()
     {
         

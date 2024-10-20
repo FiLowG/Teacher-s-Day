@@ -11,7 +11,6 @@ public class EndPlayerTurn : MonoBehaviour
     public Image ManaBar_Player;
     public Image ManaBar_Enemy;
     public GameObject EndTurnButton;
-    public GameObject PanelBack;
     public GameObject BossCanFight;
     private Color NotTurn = new Color(107f / 255f, 94f / 255f, 94f / 255f); // 6B5E5E
     private Color YourTurn = Color.white;
@@ -43,7 +42,7 @@ public class EndPlayerTurn : MonoBehaviour
         if (EndTurnButton.GetComponent<SpriteRenderer>().color == YourTurn)
         {
             BossCanFight.SetActive(false);
-            PanelBack.SetActive(false);
+           
         }
     }
   
@@ -52,7 +51,7 @@ public class EndPlayerTurn : MonoBehaviour
         if (EndTurnButton.GetComponent<SpriteRenderer>().color == YourTurn)
         {
             BossCanFight.SetActive(true);
-            PanelBack.SetActive(true);
+            
             EndTurnButton.GetComponent<SpriteRenderer>().color = NotTurn;  
             ManaBar_Enemy.fillAmount = 1;
             if (Shield_Enemy.activeSelf)

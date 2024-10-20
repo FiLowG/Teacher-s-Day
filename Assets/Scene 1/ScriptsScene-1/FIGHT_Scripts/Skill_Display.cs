@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class SKILL_Display : MonoBehaviour
 {
     public Image ManaBar_Player;
-    
     public GameObject UltimateSkill;
     public GameObject HealSkill;
     public GameObject ShieldSkill;
@@ -21,17 +20,18 @@ public class SKILL_Display : MonoBehaviour
     public GameObject GetActive;
 
     private GameStatsManager objectValue;
-    // Màu khi không đủ mana
-    private Color insufficientManaColor = new Color(107f / 255f, 94f / 255f, 94f / 255f); // 6B5E5E
-
-    // Màu bình thường của kỹ năng
-    private Color normalColor = Color.white; // Màu mặc định hoặc bạn có thể đặt lại
+    private Color insufficientManaColor = new Color(107f / 255f, 94f / 255f, 94f / 255f);
+    private Color normalColor = Color.white;
 
     void Start()
     {
-        ManaBar_Player.fillAmount = objectValue.GetPlayerMana() /10;
-        HealthBar_Player.fillAmount = objectValue.GetPlayerHealth() / 100;
-        // Đặt màu ban đầu cho tất cả các kỹ năng là màu bình thường
+        objectValue = FindObjectOfType<GameStatsManager>();
+
+        if (objectValue == null) return;
+
+        ManaBar_Player.fillAmount = objectValue.GetPlayerMana();
+        HealthBar_Player.fillAmount = objectValue.GetPlayerHealth();
+
         SetSkillColor(HealSkill, normalColor);
         SetSkillColor(ShieldSkill, normalColor);
         SetSkillColor(AttackSkill, normalColor);
@@ -40,10 +40,11 @@ public class SKILL_Display : MonoBehaviour
 
     void Update()
     {
+        if (objectValue == null) return;
 
-        int displayMana = Mathf.RoundToInt(ManaBar_Player.fillAmount * 10); // Làm tròn chính xác
-
+        int displayMana = Mathf.RoundToInt(ManaBar_Player.fillAmount * 10);
         CurrentMana_Player.text = displayMana.ToString();
+
         if (ManaBar_Player.fillAmount < 0.09999997 && ManaBar_Player.fillAmount != 0)
         {
             ManaBar_Player.fillAmount += 0.00000004f;
@@ -52,10 +53,10 @@ public class SKILL_Display : MonoBehaviour
         {
             ManaBar_Player.fillAmount += 0.00000001f;
         }
+
         int displayHealth = Mathf.RoundToInt(HealthBar_Player.fillAmount * 100);
         CurrentHealth_Player.text = displayHealth.ToString();
 
-        // HealSkill cần 0.6 mana
         if (ManaBar_Player.fillAmount >= 0.6)
         {
             SetSkillColor(HealSkill, normalColor);
@@ -67,7 +68,6 @@ public class SKILL_Display : MonoBehaviour
             HealSkill_Button.SetActive(false);
         }
 
-        // AttackSkill cần 0.4 mana
         if (ManaBar_Player.fillAmount >= 0.4)
         {
             SetSkillColor(AttackSkill, normalColor);
@@ -79,7 +79,6 @@ public class SKILL_Display : MonoBehaviour
             AttackSkill_Button.SetActive(false);
         }
 
-        // ShieldSkill cần 0.3 mana
         if (ManaBar_Player.fillAmount >= 0.3)
         {
             SetSkillColor(ShieldSkill, normalColor);
@@ -91,7 +90,6 @@ public class SKILL_Display : MonoBehaviour
             ShieldSkill_Button.SetActive(false);
         }
 
-        // UltimateSkill cần 0.5 mana
         if (ManaBar_Player.fillAmount >= 0.5 && GetActive.activeSelf)
         {
             SetSkillColor(UltimateSkill, normalColor);
@@ -104,7 +102,6 @@ public class SKILL_Display : MonoBehaviour
         }
     }
 
-    // Hàm đổi màu SpriteRenderer của kỹ năng
     void SetSkillColor(GameObject skill, Color color)
     {
         SpriteRenderer spriteRenderer = skill.GetComponent<SpriteRenderer>();

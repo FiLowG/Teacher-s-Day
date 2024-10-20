@@ -3,15 +3,13 @@ using UnityEngine;
 
 public class Unscale_Time_Notice : MonoBehaviour
 {
-    public GameObject NoticePanel;  // Bảng thông báo
-    public GameObject GuideEffects; // Hiệu ứng đi kèm (nếu có)
+    public GameObject NoticePanel;
+    public GameObject GuideEffects;
 
-    // Để kiểm tra xem Notice có đang mở không
     private bool isNoticeActive = false;
 
     void Start()
     {
-        // Khởi tạo, ẩn bảng Notice khi bắt đầu game (nếu cần)
         if (NoticePanel != null)
         {
             NoticePanel.SetActive(false);
@@ -25,44 +23,40 @@ public class Unscale_Time_Notice : MonoBehaviour
 
     void Update()
     {
-        // Khi người chơi bấm phím để hiển thị Notice (hoặc có thể là một sự kiện khác)
-        if (Input.GetKeyDown(KeyCode.N)) // Phím "N" để mở thông báo
+        if (Input.GetKeyDown(KeyCode.N))
         {
             ToggleNotice();
         }
     }
 
-    // Bật/tắt thông báo và điều chỉnh Time.timeScale
     public void ToggleNotice()
     {
-        isNoticeActive = !isNoticeActive;  // Chuyển trạng thái
+        isNoticeActive = !isNoticeActive;
 
         if (isNoticeActive)
         {
-            // Hiển thị Notice, dừng thời gian
-            Time.timeScale = 0;  // Dừng thời gian game
+            Time.timeScale = 0;
             if (NoticePanel != null)
             {
-                NoticePanel.SetActive(true);  // Bật Notice
+                NoticePanel.SetActive(true);
             }
 
             if (GuideEffects != null)
             {
-                GuideEffects.SetActive(true);  // Bật hiệu ứng nếu có
+                GuideEffects.SetActive(true);
             }
         }
         else
         {
-            // Tắt Notice, tiếp tục thời gian
-            Time.timeScale = 1;  // Khôi phục thời gian
+            Time.timeScale = 1;
             if (NoticePanel != null)
             {
-                NoticePanel.SetActive(false);  // Tắt Notice
+                NoticePanel.SetActive(false);
             }
 
             if (GuideEffects != null)
             {
-                GuideEffects.SetActive(false);  // Tắt hiệu ứng nếu có
+                GuideEffects.SetActive(false);
             }
         }
     }

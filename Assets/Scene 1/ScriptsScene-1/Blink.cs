@@ -4,13 +4,12 @@ using UnityEngine.UI;
 
 public class Blink : MonoBehaviour
 {
-    public GameObject hide;  // GameObject mà bạn muốn ẩn/hiện
-    public Text pass;        // Text mà bạn kiểm tra giá trị null
-    private Coroutine blinkCoroutine;  // Giữ tham chiếu tới Coroutine
+    public GameObject hide;
+    public Text pass;
+    private Coroutine blinkCoroutine;
 
     void Start()
     {
-        // Bắt đầu Coroutine nếu text ban đầu là rỗng
         if (pass.text == "")
         {
             blinkCoroutine = StartCoroutine(Blinku());
@@ -21,14 +20,12 @@ public class Blink : MonoBehaviour
     {
         if (pass.text != "" && blinkCoroutine != null)
         {
-            // Dừng Coroutine nếu pass.text không rỗng
             StopCoroutine(blinkCoroutine);
-            blinkCoroutine = null;  // Đặt lại tham chiếu về null
-            hide.SetActive(true);   // Đảm bảo rằng GameObject hiển thị
+            blinkCoroutine = null;
+            hide.SetActive(true);
         }
         else if (pass.text == "" && blinkCoroutine == null)
         {
-            // Bắt đầu lại Coroutine nếu pass.text rỗng và chưa có Coroutine nào chạy
             blinkCoroutine = StartCoroutine(Blinku());
         }
     }
@@ -37,10 +34,10 @@ public class Blink : MonoBehaviour
     {
         while (pass.text == "")
         {
-            hide.SetActive(false);  // Ẩn đối tượng
-            yield return new WaitForSeconds(1f);  // Chờ 1 giây
-            hide.SetActive(true);   // Hiện đối tượng
-            yield return new WaitForSeconds(1f);  // Chờ thêm 1 giây
+            hide.SetActive(false);
+            yield return new WaitForSeconds(1f);
+            hide.SetActive(true);
+            yield return new WaitForSeconds(1f);
         }
     }
 }

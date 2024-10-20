@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameStatsManager : MonoBehaviour
 {
-    private Dictionary<string, int> stats = new Dictionary<string, int>();
+    private Dictionary<string, float> stats = new Dictionary<string, float>();
 
     void Start()
     {
@@ -20,44 +20,46 @@ public class GameStatsManager : MonoBehaviour
             string[] lines = File.ReadAllLines(path);
             foreach (string line in lines)
             {
-                // Tách các chỉ số theo dấu ";" và "="
                 string[] parts = line.Split(';');
                 foreach (var part in parts)
                 {
-                    if (string.IsNullOrWhiteSpace(part)) continue; // Bỏ qua các phần trống
+                    if (string.IsNullOrWhiteSpace(part)) continue;
 
                     string[] keyValue = part.Split('=');
                     if (keyValue.Length == 2)
                     {
-                        string key = keyValue[0].Trim();  // Khóa
-                        int value = int.Parse(keyValue[1].Trim());  // Giá trị
-                        stats[key] = value;  // Lưu vào Dictionary
+                        string key = keyValue[0].Trim();
+                        string valueStr = keyValue[1].Trim();
+
+                        if (float.TryParse(valueStr, out float value))
+                        {
+                            stats[key] = value;
+                        }
                     }
                 }
             }
         }
-        else
-        {
-            Debug.LogWarning("File không tồn tại: " + path);
-        }
     }
 
-    // Các hàm đọc từng chỉ số
-    public float GetPlayerHealth() => GetStatValue("PlayerHealth");
-    public float GetPlayerMana() => GetStatValue("PlayerMana");
-    public float GetPlayerUltimate() => GetStatValue("PlayerUltimate");
-    public float GetPlayerAttack() => GetStatValue("PlayerAttack");
-    public float GetPlayerHeal() => GetStatValue("PlayerHeal");
+    void Update()
+    {
+    }
+
+    public float GetPlayerHealth() => GetStatValue("PlayerHealth") / 100;
+    public float GetPlayerMana() => GetStatValue("PlayerMana") / 10;
+    public float GetPlayerUltimate() => GetStatValue("PlayerUltimate") / 100;
+    public float GetPlayerAttack() => GetStatValue("PlayerAttack") / 100;
+    public float GetPlayerHeal() => GetStatValue("PlayerHeal") / 100;
     public float GetPlayerShield() => GetStatValue("PlayerShield");
 
-    public float GetBossHealth() => GetStatValue("BossHealth");
-    public float GetBossMana() => GetStatValue("BossMana");
-    public float GetBossAttack() => GetStatValue("BossAttack");
+    public float GetBossHealth() => GetStatValue("BossHealth") / 100;
+    public float GetBossMana() => GetStatValue("BossMana") / 10;
+    public float GetBossAttack() => GetStatValue("BossAttack") / 100;
+    public float GetBossHeal() => GetStatValue("BossHeal") / 100;
     public float GetBossShield() => GetStatValue("BossShield");
-    public float GetBossHeal() => GetStatValue("BossHeal");
 
-    private int GetStatValue(string key)
+    private float GetStatValue(string key)
     {
-        return stats.ContainsKey(key) ? stats[key] : 0; // Trả về 0 nếu không tìm thấy
+        return stats.ContainsKey(key) ? stats[key] : 0f;
     }
 }

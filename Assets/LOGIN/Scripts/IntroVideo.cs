@@ -5,7 +5,7 @@ using UnityEngine;
 public class IntroVideo : MonoBehaviour
 {
     public GameObject introVideo;
-    // Start is called before the first frame update
+    // Start is called before the first 
     void Start()
     {
         StartCoroutine(IntroOfff());

@@ -18,47 +18,38 @@ public class Pick_Item : MonoBehaviour
     public GameObject FrameSlot5;
 
     public GameObject Player_Item;
-    private Image currentSelectedSlot; // Slot hiện tại đang được chọn
-    private GameObject currentActiveFrame; // Frame hiện tại đang active
+    public Image currentSelectedSlot;
+    public GameObject currentActiveFrame;
 
-    // Hàm gọi để gán item vào slot
     void Update()
     {
-      
-            // Kiểm tra từng slot và điều chỉnh alpha dựa trên giá trị sprite
-            CheckSlotAlpha(SLOT1);
-            CheckSlotAlpha(SLOT2);
-            CheckSlotAlpha(SLOT3);
-            CheckSlotAlpha(SLOT4);
-            CheckSlotAlpha(SLOT5);
-        
+        CheckSlotAlpha(SLOT1);
+        CheckSlotAlpha(SLOT2);
+        CheckSlotAlpha(SLOT3);
+        CheckSlotAlpha(SLOT4);
+        CheckSlotAlpha(SLOT5);
 
-        // Hàm kiểm tra và đặt alpha dựa trên sprite có hay không
         void CheckSlotAlpha(Image slot)
         {
             if (slot.sprite == null)
             {
-                // Nếu sprite là null, đặt alpha về 0 (làm cho Image trong suốt)
                 Color tempColor = slot.color;
                 tempColor.a = 0;
                 slot.color = tempColor;
             }
             else
             {
-                // Nếu sprite không null, đặt alpha về 1 (hiển thị hình ảnh)
                 Color tempColor = slot.color;
                 tempColor.a = 1;
                 slot.color = tempColor;
             }
         }
-
     }
 
     public void AssignToSlot(Image Item_Image)
     {
-        if (Item_Image != null) // Kiểm tra nếu có hình ảnh được gán vào Item_Image
+        if (Item_Image != null)
         {
-            // Ưu tiên gán vào SLOT1, SLOT2, SLOT3... theo thứ tự nếu chúng trống
             if (SLOT1 != null && SLOT1.sprite == null)
             {
                 AssignImageToSlot(SLOT1, Item_Image);
@@ -84,14 +75,6 @@ public class Pick_Item : MonoBehaviour
                 AssignImageToSlot(SLOT5, Item_Image);
                 SLOT5.tag = CheckItemTag(Item_Image);
             }
-            else
-            {
-                Debug.Log("Tất cả các slot đã được sử dụng.");
-            }
-        }
-        else
-        {
-            Debug.Log("Item_Image không hợp lệ.");
         }
     }
 
@@ -100,29 +83,26 @@ public class Pick_Item : MonoBehaviour
         panelGotItem.SetActive(true);
     }
 
-    // Hàm riêng để gán hình ảnh và cài đặt màu sắc cho Image
     void AssignImageToSlot(Image slot, Image equipIcon)
     {
         slot.sprite = equipIcon.sprite;
-        slot.color = new Color32(255, 255, 255, 255); // Hiển thị hình ảnh
+        slot.color = new Color32(255, 255, 255, 255);
         slot.enabled = true;
     }
 
-    // Hàm kiểm tra tag của item và trả về tag tương ứng
     string CheckItemTag(Image equipIcon)
     {
-        string itemName = equipIcon.sprite.name; // Lấy tên của sprite từ image
+        string itemName = equipIcon.sprite.name;
         foreach (var tag in UnityEditorInternal.InternalEditorUtility.tags)
         {
             if (tag.Contains(itemName))
             {
-                return tag; // Nếu tên sprite có chứa tag phù hợp, trả về tag đó
+                return tag;
             }
         }
-        return "Untagged"; // Nếu không tìm thấy, trả về Untagged
+        return "Untagged";
     }
 
-    // Hàm gọi khi bấm vào bất kỳ Button nào của Slot
     public void OnSlotButtonClick(int slotIndex)
     {
         Image selectedSlot = null;
@@ -152,11 +132,10 @@ public class Pick_Item : MonoBehaviour
                 break;
         }
 
-        if (selectedSlot != null && selectedSlot.sprite != null) // Kiểm tra slot có hình ảnh không
+        if (selectedSlot != null && selectedSlot.sprite != null)
         {
             if (currentSelectedSlot != null && currentSelectedSlot == selectedSlot)
             {
-                // Nếu slot đã được chọn, nhấn lại sẽ tắt frame
                 selectedFrame.SetActive(false);
                 currentSelectedSlot = null;
                 currentActiveFrame = null;
@@ -164,7 +143,6 @@ public class Pick_Item : MonoBehaviour
             }
             else
             {
-                // Nếu slot khác được chọn, tắt frame cũ và bật frame mới
                 if (currentActiveFrame != null)
                 {
                     currentActiveFrame.SetActive(false);
@@ -174,7 +152,6 @@ public class Pick_Item : MonoBehaviour
                 currentSelectedSlot = selectedSlot;
                 currentActiveFrame = selectedFrame;
 
-                // Gán tag của slot cho Player_Item
                 Player_Item.tag = selectedSlot.tag;
             }
         }

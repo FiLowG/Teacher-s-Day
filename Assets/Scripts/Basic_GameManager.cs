@@ -18,7 +18,7 @@ public class Basic_GameState
 
 public class Basic_GameManager : MonoBehaviour
 {
-   
+
     void Update()
     {
         Debug.Log(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
@@ -59,11 +59,11 @@ public class Basic_GameManager : MonoBehaviour
 
     public void LoadGame()
     {
-        if (this.gameObject.layer == 6) 
+        if (this.gameObject.layer == 6)
         {
             SceneManager.LoadScene("Scene 1");
         }
-        
+
         string path = Application.persistentDataPath + "/savefile.json";
         if (File.Exists(path))
         {
