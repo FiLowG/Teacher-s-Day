@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 12515335}
   - component: {fileID: 12515334}
   m_Layer: 0
-  m_Name: backBUTTON-lockingZoom
+  m_Name: backBUTTON-lockingZoom-lockingLHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1351,7 +1351,7 @@ GameObject:
   - component: {fileID: 49074354}
   - component: {fileID: 49074353}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-2-Floor-40003_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1738,7 +1738,7 @@ GameObject:
   - component: {fileID: 52239693}
   - component: {fileID: 52239692}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-3-Floor-2n_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5830,7 +5830,7 @@ GameObject:
   - component: {fileID: 144137031}
   - component: {fileID: 144137030}
   m_Layer: 5
-  m_Name: Panel-lockingZoom
+  m_Name: Panel-lockingZoom-lockingLHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6708,7 +6708,7 @@ GameObject:
   - component: {fileID: 179075395}
   - component: {fileID: 179075394}
   m_Layer: 5
-  m_Name: Button--LostItem_Table_L Hall
+  m_Name: Button--2-Floor-30003_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7157,7 +7157,7 @@ GameObject:
   - component: {fileID: 190107922}
   - component: {fileID: 190107921}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-2-Floor-5000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7997,7 +7997,7 @@ GameObject:
   - component: {fileID: 208256351}
   - component: {fileID: 208256350}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-2-Floor-20008_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8184,7 +8184,7 @@ GameObject:
   - component: {fileID: 214180751}
   - component: {fileID: 214180750}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall
+  m_Name: ArrowMove-2-Floor-30007_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8869,7 +8869,7 @@ GameObject:
   - component: {fileID: 222083995}
   - component: {fileID: 222083994}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-EveGate-2Floor-2Floor_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9843,7 +9843,7 @@ GameObject:
   - component: {fileID: 234681163}
   - component: {fileID: 234681162}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall
+  m_Name: ArrowMove-2-Floor-10000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10362,7 +10362,7 @@ GameObject:
   - component: {fileID: 246471559}
   - component: {fileID: 246471558}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall
+  m_Name: ArrowMove-3-Floor-2c_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11496,7 +11496,7 @@ GameObject:
   - component: {fileID: 274258320}
   - component: {fileID: 274258322}
   m_Layer: 0
-  m_Name: unlock
+  m_Name: unlock-LHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12762,7 +12762,7 @@ GameObject:
   - component: {fileID: 303951968}
   - component: {fileID: 303951967}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-2-Floor-10003_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13199,7 +13199,7 @@ GameObject:
   - component: {fileID: 327866124}
   - component: {fileID: 327866123}
   m_Layer: 5
-  m_Name: Button-LostItem_Table_L Hall
+  m_Name: Button-2-Floor-4000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13762,7 +13762,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 53c20557032873242a9ff0b367e8313a, type: 3}
   m_Color: {r: 1, g: 0.8132075, b: 0.8132075, a: 1}
   m_FlipX: 0
@@ -14888,12 +14888,12 @@ GameObject:
   - component: {fileID: 375840355}
   - component: {fileID: 375840354}
   m_Layer: 0
-  m_Name: backBUTTON-CanTeenDoor
+  m_Name: backBUTTON-unlock-LHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &375840353
 Transform:
   m_ObjectHideFlags: 0
@@ -15715,7 +15715,7 @@ GameObject:
   - component: {fileID: 397253415}
   - component: {fileID: 397253414}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-Los3-Floor-1tItem_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16917,7 +16917,7 @@ GameObject:
   - component: {fileID: 418008829}
   - component: {fileID: 418008828}
   m_Layer: 5
-  m_Name: Button-BackButtonlockingZoom
+  m_Name: Button-lockingZoom0909
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17168,7 +17168,7 @@ GameObject:
   - component: {fileID: 422212647}
   - component: {fileID: 422212648}
   m_Layer: 0
-  m_Name: 2-Floor-5
+  m_Name: 2-Floor-5000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18576,6 +18576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461071791}
   - component: {fileID: 461071792}
+  - component: {fileID: 461071793}
   m_Layer: 0
   m_Name: UnActiveScene
   m_TagString: ExScene
@@ -18618,6 +18619,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7d2f9491956b4f438efcb09a678ef3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &461071793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461071790}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a046851adc4e7e49a2aefd73665f56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &466197844
@@ -19969,7 +19982,7 @@ GameObject:
   - component: {fileID: 495080536}
   - component: {fileID: 495080535}
   m_Layer: 5
-  m_Name: Button--LostItem_Table_L Hall
+  m_Name: Button--2-Floor-2000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20817,7 +20830,7 @@ GameObject:
   - component: {fileID: 513018759}
   - component: {fileID: 513018758}
   m_Layer: 5
-  m_Name: Canvas-backBUTTON-CanTeenDoor
+  m_Name: Canvas-backBUTTON-unlock-LHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22819,7 +22832,7 @@ GameObject:
   - component: {fileID: 552479975}
   - component: {fileID: 552479974}
   m_Layer: 5
-  m_Name: Button-LostItem_Table_L Hall
+  m_Name: Button-3-Floor-1_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24148,7 +24161,7 @@ GameObject:
   - component: {fileID: 575121212}
   - component: {fileID: 575121211}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-2-Floor-2000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24269,7 +24282,7 @@ GameObject:
   - component: {fileID: 576830187}
   - component: {fileID: 576830186}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-2-Floor-3000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25656,7 +25669,7 @@ GameObject:
   - component: {fileID: 602992838}
   - component: {fileID: 602992837}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall
+  m_Name: ArrowMove-2-Floor-20000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26128,7 +26141,7 @@ GameObject:
   - component: {fileID: 611261710}
   - component: {fileID: 611261709}
   m_Layer: 5
-  m_Name: Panel-unlock
+  m_Name: Panel-unlock-LHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26673,7 +26686,7 @@ GameObject:
   - component: {fileID: 635393428}
   - component: {fileID: 635393427}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall
+  m_Name: ArrowMove-EveGate-3Floor_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29398,7 +29411,7 @@ GameObject:
   - component: {fileID: 710784540}
   - component: {fileID: 710784539}
   m_Layer: 0
-  m_Name: 2-Floor-2
+  m_Name: 2-Floor-2000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29486,7 +29499,7 @@ GameObject:
   - component: {fileID: 711077202}
   - component: {fileID: 711077201}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall (1)
+  m_Name: Canvas-In_LIft_CloserButton000_Table_L Hall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30489,7 +30502,7 @@ GameObject:
   - component: {fileID: 737287417}
   - component: {fileID: 737287416}
   m_Layer: 5
-  m_Name: Button--LostItem_Table_L Hall
+  m_Name: Button--3-Floor-25_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30869,7 +30882,7 @@ GameObject:
   - component: {fileID: 752822295}
   - component: {fileID: 752822294}
   m_Layer: 5
-  m_Name: Button-LostItem_Table_L Hall
+  m_Name: Button-2-Floor-2000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31001,7 +31014,7 @@ GameObject:
   - component: {fileID: 753608745}
   - component: {fileID: 753608744}
   m_Layer: 5
-  m_Name: ButtonBack-CanTeenDoor
+  m_Name: ButtonBack-unlock-LHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32208,7 +32221,7 @@ GameObject:
   - component: {fileID: 772548846}
   - component: {fileID: 772548845}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall (1)
+  m_Name: ArrowMove-3-Floor-3.1_Table_L Hall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32313,7 +32326,7 @@ GameObject:
   - component: {fileID: 773774646}
   - component: {fileID: 773774645}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-3-Floor-37_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32582,7 +32595,7 @@ GameObject:
   - component: {fileID: 780470515}
   - component: {fileID: 780470514}
   m_Layer: 5
-  m_Name: Button--LostItem_Table_L Hall
+  m_Name: Button--3-Floor-3.1_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33523,7 +33536,7 @@ GameObject:
   - component: {fileID: 807273726}
   - component: {fileID: 807273725}
   m_Layer: 5
-  m_Name: Button-LostItem_Table_L Hall
+  m_Name: Button-EveGate-2Floor6_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33968,7 +33981,7 @@ GameObject:
   - component: {fileID: 813157420}
   - component: {fileID: 813157419}
   m_Layer: 0
-  m_Name: 2-Floor-1
+  m_Name: 2-Floor-1000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34056,7 +34069,7 @@ GameObject:
   - component: {fileID: 814111689}
   - component: {fileID: 814111688}
   m_Layer: 5
-  m_Name: Button--LostItem_Table_L Hall
+  m_Name: Button--3EveGate-3Floor_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34792,7 +34805,7 @@ GameObject:
   - component: {fileID: 834298202}
   - component: {fileID: 834298201}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall (1)
+  m_Name: ArrowMove-3-Floor-2b_Table_L Hall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36832,7 +36845,7 @@ GameObject:
   - component: {fileID: 883918207}
   - component: {fileID: 883918206}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-3-Floor-3.17_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38650,7 +38663,7 @@ GameObject:
   - component: {fileID: 941738187}
   - component: {fileID: 941738186}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall (1)
+  m_Name: ArrowMove-In_LIft_CloserButton000_Table_L Hall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39615,7 +39628,7 @@ GameObject:
   - component: {fileID: 990870841}
   - component: {fileID: 990870840}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall (1)
+  m_Name: Canvas-In_LIft_CloserButton_Table_L Hall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39995,7 +40008,7 @@ GameObject:
   - component: {fileID: 999839432}
   - component: {fileID: 999839431}
   m_Layer: 5
-  m_Name: Button-LostItem_Table_L Hall
+  m_Name: Button-3-Floor-39_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40464,7 +40477,7 @@ GameObject:
   - component: {fileID: 1011914065}
   - component: {fileID: 1011914064}
   m_Layer: 5
-  m_Name: Button--LostItem_Table_L Hall
+  m_Name: Button--3-Floor-37_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41086,7 +41099,7 @@ GameObject:
   - component: {fileID: 1024225360}
   - component: {fileID: 1024225359}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-2-Floor-1000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41205,7 +41218,7 @@ GameObject:
   - component: {fileID: 1026353399}
   - component: {fileID: 1026353398}
   m_Layer: 0
-  m_Name: locking
+  m_Name: lockingLHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41953,7 +41966,7 @@ GameObject:
   - component: {fileID: 1050934175}
   - component: {fileID: 1050934174}
   m_Layer: 5
-  m_Name: 'Button-LostItem_Table_L Hall '
+  m_Name: 'Button-In_LIft_CloserButton-_Table_L Hall '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42189,7 +42202,7 @@ GameObject:
   - component: {fileID: 1056855362}
   - component: {fileID: 1056855361}
   m_Layer: 5
-  m_Name: Button--LostItem_Table_L Hall
+  m_Name: Button--2-Floor-5000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42850,7 +42863,7 @@ GameObject:
   - component: {fileID: 1079726402}
   - component: {fileID: 1079726401}
   m_Layer: 5
-  m_Name: Button--LostItem_Table_L Hall
+  m_Name: Button--3-Floor-2z_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43528,7 +43541,7 @@ GameObject:
   - component: {fileID: 1089401004}
   - component: {fileID: 1089401003}
   m_Layer: 5
-  m_Name: 'Button-LostItem_Table_L Hall '
+  m_Name: 'Button-In_LIft_CloserButton000_Table_L Hall '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46227,7 +46240,7 @@ GameObject:
   - component: {fileID: 1171976557}
   - component: {fileID: 1171976556}
   m_Layer: 5
-  m_Name: Button-LostItem_Table_L Hall
+  m_Name: Button-2-Floor-1000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47263,7 +47276,7 @@ GameObject:
   - component: {fileID: 1196945197}
   - component: {fileID: 1196945196}
   m_Layer: 0
-  m_Name: EveGate-2Floor
+  m_Name: EveGate-2Floor0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48113,7 +48126,7 @@ GameObject:
   - component: {fileID: 1219305363}
   - component: {fileID: 1219305362}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall
+  m_Name: ArrowMove-2-Floor-40006_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48923,7 +48936,7 @@ GameObject:
   - component: {fileID: 1248459642}
   - component: {fileID: 1248459641}
   m_Layer: 5
-  m_Name: Button-LockingZoom
+  m_Name: Button-lockingZoom-lockingLHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51395,7 +51408,7 @@ GameObject:
   - component: {fileID: 1332937850}
   - component: {fileID: 1332937849}
   m_Layer: 5
-  m_Name: Canvas-locking
+  m_Name: Canvas-lockingLHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52111,7 +52124,7 @@ GameObject:
   - component: {fileID: 1359938827}
   - component: {fileID: 1359938826}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-3-Floor-15_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52213,7 +52226,7 @@ GameObject:
   - component: {fileID: 1362144188}
   - component: {fileID: 1362144187}
   m_Layer: 5
-  m_Name: Canvas-unlock
+  m_Name: Canvas-unlock-LHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52643,7 +52656,7 @@ GameObject:
   - component: {fileID: 1370326617}
   - component: {fileID: 1370326616}
   m_Layer: 5
-  m_Name: Button--LostItem_Table_L Hall
+  m_Name: Button--EveGate-2Floor9_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54488,7 +54501,7 @@ GameObject:
   - component: {fileID: 1434931954}
   - component: {fileID: 1434931953}
   m_Layer: 0
-  m_Name: 2-Floor-4
+  m_Name: 2-Floor-4000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54661,7 +54674,7 @@ GameObject:
   - component: {fileID: 1437697029}
   - component: {fileID: 1437697028}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall
+  m_Name: ArrowMove-2-Floor-5000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56605,7 +56618,7 @@ GameObject:
   - component: {fileID: 1500223577}
   - component: {fileID: 1500223576}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall
+  m_Name: ArrowMove-3-Floor-15_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57737,7 +57750,7 @@ GameObject:
   - component: {fileID: 1537527375}
   - component: {fileID: 1537527374}
   m_Layer: 0
-  m_Name: 2-Floor-3
+  m_Name: 2-Floor-3000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58321,7 +58334,7 @@ GameObject:
   - component: {fileID: 1557078909}
   - component: {fileID: 1557078908}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall
+  m_Name: ArrowMove-EveGate-2Floor9_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61847,7 +61860,7 @@ GameObject:
   - component: {fileID: 1664053018}
   - component: {fileID: 1664053017}
   m_Layer: 5
-  m_Name: Canvas-BackButtonlockingZoom
+  m_Name: Canvas-lockingZoom-lockingLHall00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62051,7 +62064,7 @@ GameObject:
   - component: {fileID: 1669688691}
   - component: {fileID: 1669688690}
   m_Layer: 5
-  m_Name: Button--LostItem_Table_L Hall
+  m_Name: Button--2-Floor-10008_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63882,7 +63895,7 @@ GameObject:
   - component: {fileID: 1705798969}
   - component: {fileID: 1705798968}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-3-Floor-2c_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63984,7 +63997,7 @@ GameObject:
   - component: {fileID: 1707818288}
   - component: {fileID: 1707818287}
   m_Layer: 5
-  m_Name: Button-LostItem_Table_L Hall
+  m_Name: Button-2-Floor-3000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64478,7 +64491,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720052212}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 83e592d39cfb2114092b8ce35db4bed1, type: 3}
@@ -64662,7 +64675,7 @@ GameObject:
   - component: {fileID: 1727089050}
   - component: {fileID: 1727089051}
   m_Layer: 0
-  m_Name: In_LIft_CloserButton
+  m_Name: In_LIft_CloserButton000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66424,7 +66437,7 @@ GameObject:
   - component: {fileID: 1780400508}
   - component: {fileID: 1780400507}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-EveGate-2Floor1_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67309,7 +67322,7 @@ GameObject:
   - component: {fileID: 1792540610}
   - component: {fileID: 1792540609}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall (1)
+  m_Name: ArrowMove-In_LIft_CloserButton_Table_L Hall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68061,7 +68074,7 @@ GameObject:
   - component: {fileID: 1826792415}
   - component: {fileID: 1826792414}
   m_Layer: 5
-  m_Name: Button--LostItem_Table_L Hall
+  m_Name: Button--3-Floor-17_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68713,7 +68726,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 53c20557032873242a9ff0b367e8313a, type: 3}
   m_Color: {r: 1, g: 0.79811317, b: 0.79811317, a: 1}
   m_FlipX: 0
@@ -69907,7 +69920,7 @@ GameObject:
   - component: {fileID: 1856091542}
   - component: {fileID: 1856091541}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-2-Floor-4000_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71344,7 +71357,7 @@ GameObject:
   - component: {fileID: 1873415882}
   - component: {fileID: 1873415881}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-2-Floor-30007_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71446,7 +71459,7 @@ GameObject:
   - component: {fileID: 1875268148}
   - component: {fileID: 1875268147}
   m_Layer: 5
-  m_Name: Button-locking
+  m_Name: Button-lockingLHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71578,7 +71591,7 @@ GameObject:
   - component: {fileID: 1881175600}
   - component: {fileID: 1881175599}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-EveGate-3Floor-_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73381,7 +73394,7 @@ GameObject:
   - component: {fileID: 1943318706}
   - component: {fileID: 1943318705}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-3-Floor-38_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74408,7 +74421,7 @@ GameObject:
   - component: {fileID: 1966907328}
   - component: {fileID: 1966907327}
   m_Layer: 5
-  m_Name: Button-LostItem_Table_L Hall
+  m_Name: Button-EveGate-3Floor_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74757,7 +74770,7 @@ GameObject:
   - component: {fileID: 1985324324}
   - component: {fileID: 1985324323}
   m_Layer: 5
-  m_Name: Button--LostItem_Table_L Hall
+  m_Name: Button--2-Floor-40001_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75514,7 +75527,7 @@ GameObject:
   - component: {fileID: 2003215034}
   - component: {fileID: 2003215033}
   m_Layer: 5
-  m_Name: Canvas-LostItem_Table_L Hall
+  m_Name: Canvas-EveGate-3Floor_Table_L Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75961,7 +75974,7 @@ GameObject:
   - component: {fileID: 2014925210}
   - component: {fileID: 2014925209}
   m_Layer: 0
-  m_Name: ArrowMove-LostItem_Table_L Hall (1)
+  m_Name: ArrowMove-3-Floor-35_Table_L Hall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77244,7 +77257,7 @@ GameObject:
   - component: {fileID: 2057900639}
   - component: {fileID: 2057900642}
   m_Layer: 0
-  m_Name: lockingZoom
+  m_Name: lockingZoom-lockingLHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79703,7 +79716,7 @@ GameObject:
   - component: {fileID: 2132733069}
   - component: {fileID: 2132733068}
   m_Layer: 5
-  m_Name: Canvas-lockingZoom
+  m_Name: Canvas-lockingZoom-lockingLHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
