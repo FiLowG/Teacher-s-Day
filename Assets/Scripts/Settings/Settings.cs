@@ -6,12 +6,13 @@ using System.IO;
 public class Settings : MonoBehaviour
 {
     public GameObject Tick;
-    public GameObject BKGMusic;
     public AudioListener TakeAudio;
     private string contentFilePath;
     private string objectValueFilePath;
     public GameObject LangOptions;
-
+    public GameObject Button_Lang_ON;
+    public GameObject Button_Lang_OFF;
+   
     void Start()
     {
         contentFilePath = Path.Combine(Application.persistentDataPath, "Content_Teacher_sDay.txt");
@@ -20,22 +21,18 @@ public class Settings : MonoBehaviour
 
     public void Music()
     {
-        if (BKGMusic != null)
+
+        if (Tick.activeSelf)
         {
-            if (Tick.activeSelf)
-            {
-                BKGMusic.SetActive(true);
-            }
-            else
-            {
-                BKGMusic.SetActive(false);
-            }
+            TakeAudio.enabled = true;
         }
         else
         {
             TakeAudio.enabled = false;
         }
     }
+       
+    
 
     public void ClearData()
     {
@@ -45,11 +42,14 @@ public class Settings : MonoBehaviour
         if (File.Exists(saveFilePath))
         {
             File.WriteAllText(saveFilePath, string.Empty);
+            Debug.Log("Đã xóa dữ liệu trò chơi!");
+
         }
 
         if (File.Exists(inventorySavePath))
         {
             File.WriteAllText(inventorySavePath, string.Empty);
+            Debug.Log("Đã xóa dữ liệu kho đồ!");
         }
     }
 
@@ -81,6 +81,7 @@ public class Settings : MonoBehaviour
 
                 File.WriteAllText(contentFilePath, vietnameseContent);
                 LangOptions.SetActive(false);
+                Debug.Log("Đã đổi sang Tiếng Việt!");
             }
         }
     }
@@ -109,6 +110,30 @@ public class Settings : MonoBehaviour
 
             File.WriteAllText(contentFilePath, englishContent);
             LangOptions.SetActive(false);
+            Debug.Log("Changed to English!");
+
         }
+
+    }
+    public void LangOption_OFF()
+    {
+        if (LangOptions.activeSelf)
+        {
+            LangOptions.SetActive(false);
+            Button_Lang_OFF.SetActive(false);
+            Button_Lang_ON.SetActive(true);
+        }
+        
+    }
+    public void LangOption_ON()
+    {
+        if (!LangOptions.activeSelf)
+        {
+            LangOptions.SetActive(true);
+            Button_Lang_ON.SetActive(false);
+            Button_Lang_OFF.SetActive(true);
+        }
+
     }
 }
+ 

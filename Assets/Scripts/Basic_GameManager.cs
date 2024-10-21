@@ -21,7 +21,7 @@ public class Basic_GameManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+      
     }
 
     public void SaveGame()
