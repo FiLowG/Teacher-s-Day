@@ -7,37 +7,63 @@ public class Heal_Skill : MonoBehaviour
 {
     public Image HealBar;
     private GameStatsManager objectValue;
+    private float healAmount;
+    public GameObject WhoUse;
 
     void Start()
     {
+       
         objectValue = FindObjectOfType<GameStatsManager>();
-
-        if (objectValue == null)
+        if (WhoUse.tag.Contains("Player"))
         {
-            return;
+           
+            healAmount = 0.05f;
+           
+        }
+        if (WhoUse.tag.Contains("Boss") && !WhoUse.name.Contains("DucThang") && !WhoUse.tag.Contains("BossAn"))
+        {
+            healAmount = 0.03f;
+        }
+        if (WhoUse.tag.Contains("Boss") && WhoUse.name.Contains("DucThang"))
+        {
+            healAmount = 0.01f;
+        }
+        if (WhoUse.tag.Contains("BossAn"))
+        {
+            healAmount = 0.07f;
         }
 
-        StartCoroutine(Healing());
+
+
+
+
     }
 
     void Update()
     {
+       
+    }
+    public void CallCoroutine()
+    {
+        StartCoroutine(Healing());
+      
     }
 
     IEnumerator Healing()
     {
-        for (int i = 0; i < 4; i++)
-        {
-            float healAmount = objectValue.GetPlayerHeal();
+        Debug.Log(this.gameObject.name + " 0 " + healAmount);
 
-            HealBar.fillAmount += healAmount;
+        HealBar.fillAmount += healAmount;
+        yield return new WaitForSeconds(0.7f);
+        HealBar.fillAmount += healAmount;
+        yield return new WaitForSeconds(0.7f);
+        HealBar.fillAmount += healAmount;
+        
+        yield return new WaitForSeconds(0.7f);
+        HealBar.fillAmount += healAmount;
+        Debug.Log(this.gameObject.name + " 1 " + healAmount);
 
-            if (HealBar.fillAmount > 1f)
-            {
-                HealBar.fillAmount = 1f;
-            }
 
-            yield return new WaitForSeconds(0.7f);
-        }
+
     }
 }

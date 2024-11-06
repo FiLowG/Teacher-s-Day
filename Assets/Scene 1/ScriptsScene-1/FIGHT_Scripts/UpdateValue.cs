@@ -8,6 +8,7 @@ public class GameStatsManager : MonoBehaviour
 
     void Start()
     {
+        
         LoadStats();
     }
 
@@ -43,6 +44,7 @@ public class GameStatsManager : MonoBehaviour
 
     void Update()
     {
+        
     }
 
     public float GetPlayerHealth() => GetStatValue("PlayerHealth") / 100;

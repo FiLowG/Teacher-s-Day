@@ -10,26 +10,36 @@ public class GetDame : MonoBehaviour
     private GameStatsManager objectValue;
     private float damageAmount_Player;
     private float damageAmount_Enemy;
-
+    public float Damage_Option_Enemy = 0;
+    public float Damage_Option_Player = 0;
     public GameObject DameEffects;
 
     void Start()
     {
         objectValue = FindObjectOfType<GameStatsManager>();
 
-        if (objectValue != null)
+        if (objectValue != null && Damage_Option_Enemy == 0)
         {
-            damageAmount_Player = objectValue.GetPlayerAttack();
+           
             damageAmount_Enemy = objectValue.GetBossAttack();
         }
         else
         {
-            Debug.LogError("Không tìm thấy GameStatsManager trong scene!");
+            damageAmount_Enemy = Damage_Option_Enemy;
+        }
+        if ((objectValue != null && Damage_Option_Player == 0))
+        {
+            damageAmount_Player = objectValue.GetPlayerAttack();
+        }
+        else
+        {
+            damageAmount_Player = Damage_Option_Player;
         }
     }
 
     void Update()
     {
+      
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -40,7 +50,7 @@ public class GetDame : MonoBehaviour
             {
                 PlayerHeal.fillAmount -= damageAmount_Enemy;
             }
-            else if (this.gameObject.tag.Contains("Boss"))
+            else if (this.gameObject.tag.Contains("Boss") && !collision.gameObject.tag.Contains("Boss_Attack"))
             {
                 BossHeal.fillAmount -= damageAmount_Player;
             }

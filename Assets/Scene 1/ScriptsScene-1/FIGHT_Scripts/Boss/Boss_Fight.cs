@@ -20,7 +20,7 @@ public class Boss_Fight : MonoBehaviour
     private bool ultimateCooldown = false;
     private SpriteRenderer endTurnButtonRenderer;
     public GameObject Shield_Player;
-
+    public GameObject WhoUse;
     void Start()
     {
         ManaBar.fillAmount = 1;
@@ -31,7 +31,7 @@ public class Boss_Fight : MonoBehaviour
     {
         if (!isUsingSkill)
         {
-            if (BossCanFight.activeSelf && ManaBar.fillAmount >= 0.5 && BossCanUltimate.activeSelf && !ultimateCooldown)
+            if (BossCanFight.activeSelf && ManaBar.fillAmount >= 0.5 && BossCanUltimate.activeSelf && !ultimateCooldown && !WhoUse.name.Contains("DucThang"))
             {
                 StartCoroutine(UseSkill(2, UseUltimate, "Ultimate"));
                 StartCoroutine(StartUltimateCooldown(40));

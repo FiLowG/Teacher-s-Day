@@ -45,8 +45,11 @@ public class Unlocking : MonoBehaviour
         }
         else
         {
-            notice.SetActive(true);
-            StartCoroutine(OffNotice());
+            if (notice != null)
+            {
+                notice.SetActive(true);
+                StartCoroutine(OffNotice());
+            }
         }
     }
 

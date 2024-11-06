@@ -15,8 +15,11 @@ public class TypewriterEffect : MonoBehaviour
     private Coroutine typingCoroutine;
     private bool isTyping = false;
     public GameObject StartAfterTalk;
+    public GameObject OFFAfterTalk;
     public GameObject Breath;
-
+    public GameObject TuiDo;
+    public GameObject UI_On_Scene;
+        
     void Start()
     {
         filePath = Application.persistentDataPath + "/Content_Teacher_sDay.txt";
@@ -30,6 +33,14 @@ public class TypewriterEffect : MonoBehaviour
             if (Breath != null)
             {
                 Breath.SetActive(false);
+            }
+            if (TuiDo != null)
+            {
+                TuiDo.SetActive(false);
+            }
+            if (UI_On_Scene != null)
+            {
+                UI_On_Scene.SetActive(false);
             }
         }
     }
@@ -108,9 +119,21 @@ public class TypewriterEffect : MonoBehaviour
                 {
                     StartAfterTalk.SetActive(true);
                 }
+                if (OFFAfterTalk != null)
+                {
+                    OFFAfterTalk.SetActive(false);
+                }
                 if (Breath != null)
                 {
                     Breath.SetActive(true);
+                }
+                if (TuiDo != null)
+                {
+                    TuiDo.SetActive(true);
+                }
+                if (UI_On_Scene != null)
+                {
+                    UI_On_Scene.SetActive(true);
                 }
                 Talker.SetActive(false);
             }

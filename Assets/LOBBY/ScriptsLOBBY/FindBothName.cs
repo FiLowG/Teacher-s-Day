@@ -10,7 +10,8 @@ public class FindDuplicateObjects : MonoBehaviour
 
     void FindDuplicateObjectsInScene()
     {
-        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+        // Tìm tất cả GameObjects, bao gồm cả những GameObject chưa kích hoạt
+        GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>(true);
         Dictionary<string, List<GameObject>> objectNameDictionary = new Dictionary<string, List<GameObject>>();
 
         bool hasDuplicate = false;
@@ -34,15 +35,20 @@ public class FindDuplicateObjects : MonoBehaviour
             if (entry.Value.Count > 1)
             {
                 hasDuplicate = true;
+                Debug.Log("Found duplicates for: " + entry.Key + " (Count: " + entry.Value.Count + ")");
 
-                foreach (GameObject duplicate in entry.Value)
+                for (int i = 0; i < entry.Value.Count; i++)
                 {
+                    GameObject duplicate = entry.Value[i];
+                    duplicate.name = entry.Key + " +" + (i + 1); // Đổi tên GameObject
+                    Debug.Log("Renamed to: " + duplicate.name);
                 }
             }
         }
 
         if (!hasDuplicate)
         {
+            Debug.Log("No duplicates found.");
         }
     }
 }

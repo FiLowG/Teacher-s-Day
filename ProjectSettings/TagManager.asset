@@ -18,6 +18,19 @@ TagManager:
   - Save1
   - ExScene
   - Key_LHall
+  - LiftCard
+  - HuyHieu_CNTT
+  - HuyHieu_BMTA
+  - Empty_1
+  - Empty_2
+  - Son_Pass
+  - HuyHieu_TKDH
+  - Remote
+  - BOMB
+  - HuyHieu_TMDT
+  - HuyHieu_HieuTruong
+  - Ultimate_DucThang
+  - Ultimate_HieuTruong
   layers:
   - Default
   - TransparentFX

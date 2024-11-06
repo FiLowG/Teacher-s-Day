@@ -11,6 +11,7 @@ public class UseSkill_Normal : MonoBehaviour
     public GameObject AttackEffects;
     public GameObject HealEffects;
     public GameObject ShieldEffects;
+    public GameObject OldHand;
     // Start is called before the first frame update
     public Text CD_Display;
     public GameObject CD_Display_Object;
@@ -61,7 +62,7 @@ public class UseSkill_Normal : MonoBehaviour
         }
         else if (this.gameObject.CompareTag("Attack"))
         {
-            ManaBar.fillAmount -= 0.3f;
+            ManaBar.fillAmount -= 0.4f;
         }
         else if (this.gameObject.CompareTag("Heal"))
         {
@@ -82,6 +83,10 @@ public class UseSkill_Normal : MonoBehaviour
     public void UseAttack()
     {
         AttackEffects.SetActive(true);
+        if (OldHand != null)
+        {
+            OldHand.SetActive(false);
+        }
     }
     public void UseHeal()
     {

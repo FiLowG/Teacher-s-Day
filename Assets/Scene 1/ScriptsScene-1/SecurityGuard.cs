@@ -30,12 +30,15 @@ public class SecurityGuard : MonoBehaviour
     }
 
     void Update()
-    {
-        if (this.gameObject == SeePlayerYet && OnSee && NoBreath.activeSelf)
+    { 
+        if (SeePlayerYet != null && this.gameObject == SeePlayerYet && OnSee && NoBreath.activeSelf)
         {
            
                 SeePlayer.SetActive(true);
+            if (SeePlayerYet != null)
+            {
                 SeePlayerYet.SetActive(false);
+            }
         }
         if (this.gameObject == SeePlayer)
         {
@@ -43,7 +46,10 @@ public class SecurityGuard : MonoBehaviour
         }
         if (this.gameObject == SawPlayer)
         {
-            SeePlayerYet.SetActive(false);
+            if (SeePlayerYet != null)
+            {
+                SeePlayerYet.SetActive(false);
+            }
             SeePlayer.SetActive(false);
         }
 

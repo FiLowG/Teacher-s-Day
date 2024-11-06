@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Elevator_ToGo : MonoBehaviour
-{   public GameObject One_buttonIn;
+{
+    public GameObject UI_On_Scene; 
+    public GameObject One_buttonIn;
     public GameObject One_buttonOut;
     public GameObject Two_buttonIn;
     public GameObject Two_buttonOut;
@@ -34,6 +36,7 @@ public class Elevator_ToGo : MonoBehaviour
     public void Use_Lift(int flr)
     {   if ( flr ==1)
         {
+            UI_On_Scene.SetActive(false);
             if (Two_buttonIn != null) Two_buttonIn.SetActive(false);
             if (Two_buttonOut != null) Two_buttonOut.SetActive(false);
             if (Four_buttonIn != null) Four_buttonIn.SetActive(false);
@@ -44,7 +47,7 @@ public class Elevator_ToGo : MonoBehaviour
 
         else if (flr == 2 || flr == 3)
         {
-            
+            UI_On_Scene.SetActive(false);
             if (Four_buttonIn != null) Four_buttonIn.SetActive(false);
             if (Four_buttonOut != null) Four_buttonOut.SetActive(false);
             if (Two_buttonIn != null) Two_buttonIn.SetActive(true);
@@ -54,6 +57,7 @@ public class Elevator_ToGo : MonoBehaviour
         }
         else if (flr == 4)
         {
+            UI_On_Scene.SetActive(false);
             if (Two_buttonIn != null) Two_buttonIn.SetActive(false);
             if (Two_buttonOut != null) Two_buttonOut.SetActive(false);
             if (Four_buttonIn != null) Four_buttonIn.SetActive(true);
@@ -73,6 +77,7 @@ public class Elevator_ToGo : MonoBehaviour
             if (Four_buttonOut != null) Four_buttonOut.SetActive(false);
             if (SceneWantGo1flr1 != null) SceneWantGo1flr1.SetActive(true);
             if (SceneWantGo1flr2 != null) SceneWantGo1flr2.SetActive(true);
+            UI_On_Scene.SetActive(true);
         }
             IEnumerator Lift2()
         {
@@ -85,6 +90,7 @@ public class Elevator_ToGo : MonoBehaviour
             if (Two_buttonOut != null) Two_buttonOut.SetActive(false);
             if (SceneWantGo2flr1 != null) SceneWantGo2flr1.SetActive(true);
             if (SceneWantGo2flr2 != null) SceneWantGo2flr2.SetActive(true);
+            UI_On_Scene.SetActive(true);
         }
         IEnumerator Lift4()
         {
@@ -97,6 +103,7 @@ public class Elevator_ToGo : MonoBehaviour
             if (Four_buttonOut != null) Four_buttonOut.SetActive(false);
             if (SceneWantGo4flr1 != null) SceneWantGo4flr1.SetActive(true);
             if (SceneWantGo4flr2 != null) SceneWantGo4flr2.SetActive(true);
+            UI_On_Scene.SetActive(true);
         }
         IEnumerator Lift_Bell_Set()
         {

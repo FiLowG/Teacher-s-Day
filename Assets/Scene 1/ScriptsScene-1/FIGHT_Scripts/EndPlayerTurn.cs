@@ -19,7 +19,7 @@ public class EndPlayerTurn : MonoBehaviour
     public GameObject Panel_Win;
     public GameObject Panel_Loss;
     public GameObject Breath;
-   
+    public GameObject Banned_Turn;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +29,12 @@ public class EndPlayerTurn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (HealBar_Enemy.fillAmount == 0)
+        if (HealBar_Enemy.fillAmount < 0.01)
         {
             Breath.SetActive(true);
             Panel_Win.SetActive(true);
         }
-        if (HealBar_Player.fillAmount == 0)
+        if (HealBar_Player.fillAmount < 0.01)
         {
 
             Panel_Loss.SetActive(true);
@@ -58,7 +58,10 @@ public class EndPlayerTurn : MonoBehaviour
             {
                 Shield_Enemy.SetActive(false);
             }
-
+            if (Banned_Turn.activeSelf) 
+            { 
+                Banned_Turn.SetActive(false);
+            }
         }
     }
 

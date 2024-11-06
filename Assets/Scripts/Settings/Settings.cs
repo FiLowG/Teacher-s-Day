@@ -18,10 +18,12 @@ public class Settings : MonoBehaviour
         contentFilePath = Path.Combine(Application.persistentDataPath, "Content_Teacher_sDay.txt");
         objectValueFilePath = Path.Combine(Application.persistentDataPath, "ObjectValue.txt");
     }
-
+     void Update()
+    {
+        Music();
+    }
     public void Music()
     {
-
         if (Tick.activeSelf)
         {
             TakeAudio.enabled = true;

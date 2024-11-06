@@ -42,7 +42,7 @@ public class SKILL_Display : MonoBehaviour
     {
         if (objectValue == null) return;
 
-        int displayMana = Mathf.RoundToInt(ManaBar_Player.fillAmount * 10);
+        int displayMana = Mathf.FloorToInt(ManaBar_Player.fillAmount * 10);
         CurrentMana_Player.text = displayMana.ToString();
 
         if (ManaBar_Player.fillAmount < 0.09999997 && ManaBar_Player.fillAmount != 0)
@@ -54,7 +54,7 @@ public class SKILL_Display : MonoBehaviour
             ManaBar_Player.fillAmount += 0.00000001f;
         }
 
-        int displayHealth = Mathf.RoundToInt(HealthBar_Player.fillAmount * 100);
+        int displayHealth = Mathf.FloorToInt(HealthBar_Player.fillAmount * 100);
         CurrentHealth_Player.text = displayHealth.ToString();
 
         if (ManaBar_Player.fillAmount >= 0.6)
@@ -68,7 +68,7 @@ public class SKILL_Display : MonoBehaviour
             HealSkill_Button.SetActive(false);
         }
 
-        if (ManaBar_Player.fillAmount >= 0.4)
+        if (ManaBar_Player.fillAmount >= 0.39f)
         {
             SetSkillColor(AttackSkill, normalColor);
             AttackSkill_Button.SetActive(true);

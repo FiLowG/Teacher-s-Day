@@ -14,7 +14,7 @@ public class BossAn_Skill : MonoBehaviour
     void Start()
     {
         objectValue = FindObjectOfType<GameStatsManager>();
-
+        
         if (objectValue != null)
         {
             ManaBar_Enemy.fillAmount = objectValue.GetBossMana();
@@ -24,6 +24,7 @@ public class BossAn_Skill : MonoBehaviour
 
     void Update()
     {
+       
         int displayMana = Mathf.RoundToInt(ManaBar_Enemy.fillAmount * 10);
         CurrentMana_Enemy.text = displayMana.ToString();
 
